@@ -1,0 +1,41 @@
+/* ==========================================================================
+   1. UNIVERSAL BOX-SIZING RESET
+   ========================================================================== */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* ==========================================================================
+   2. THIẾT LẬP CƠ BẢN
+   ========================================================================== */
+.box {
+  width: 250px;
+  height: 150px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   3. TINH CHỈNH TỪNG HỘP (SHORTHAND & INDIVIDUAL EDGES)
+   ========================================================================== */
+
+/* Hộp 1: Sử dụng Shorthand 4 giá trị và Border chi tiết cạnh trái */
+.box-1 {
+  background-color: lightskyblue;
+  padding: 10px 20px 30px 40px; /* Trên: 10px | Phải: 20px | Dưới: 30px | Trái: 40px */
+  border-left: 8px dotted red; /* Viền nét chấm bi riêng ở cạnh trái */
+}
+
+/* Hộp 2: Sử dụng Margin chi tiết và Shorthand 2 giá trị */
+.box-2 {
+  background-color: lightsalmon;
+  margin-top: 60px; /* Đẩy xa Hộp 1 phía trên 60px */
+  margin-left: 100px; /* Đẩy xa lề trái màn hình 100px */
+  padding: 25px 50px; /* Trên/Dưới: 25px | Trái/Phải: 50px */
+}

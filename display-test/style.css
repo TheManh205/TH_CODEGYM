@@ -1,0 +1,43 @@
+/* ==========================================================================
+   1. RESET BOX-SIZING
+   ========================================================================== */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. BỘ LUẬT CSS CHUNG CHO CÁC HỘP THÍ NGHIỆM
+   ========================================================================== */
+.box {
+  width: 250px;
+  height: 100px;
+  padding: 20px;
+  margin: 20px;
+  border: 3px solid #333;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   3. PHÂN BIỆT MÀU SẮC
+   ========================================================================== */
+
+/* Hộp Block: Màu xanh da trời */
+.block-box {
+  background-color: lightskyblue;
+}
+
+/* Hộp Inline: Màu cam nhạt */
+.inline-box {
+  background-color: lightsalmon;
+}

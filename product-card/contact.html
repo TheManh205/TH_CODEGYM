@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên hệ với chúng tôi</title>
+  </head>
+  <body>
+    <h1>Liên hệ với chúng tôi</h1>
+    <p>Chúng tôi rất mong nhận được phản hồi từ bạn!</p>
+
+    <form action="#" method="post">
+      <!-- Họ và tên -->
+      <div>
+        <label for="ho_ten">Họ và tên:</label><br />
+        <input type="text" id="ho_ten" name="ho_ten" required />
+      </div>
+      <br />
+
+      <!-- Email -->
+      <div>
+        <label for="email">Email của bạn:</label><br />
+        <input type="email" id="email" name="email_nguoi_dung" required />
+      </div>
+      <br />
+
+      <!-- Thử thách thêm: Chọn chủ đề liên hệ (Radio Buttons) -->
+      <div>
+        <label>Chủ đề liên hệ:</label><br />
+        <input type="radio" id="ho_tro" name="chu_de" value="ho_tro" checked />
+        <label for="ho_tro">Hỗ trợ kỹ thuật</label><br />
+
+        <input type="radio" id="gop_y" name="chu_de" value="gop_y" />
+        <label for="gop_y">Góp ý sản phẩm</label><br />
+
+        <input type="radio" id="khac" name="chu_de" value="khac" />
+        <label for="khac">Khác</label>
+      </div>
+      <br />
+
+      <!-- Lời nhắn -->
+      <div>
+        <label for="loi_nhan">Lời nhắn:</label><br />
+        <textarea id="loi_nhan" name="loi_nhan" rows="5" required></textarea>
+      </div>
+      <br />
+
+      <!-- Nút Gửi -->
+      <div>
+        <button type="submit">Gửi lời nhắn</button>
+      </div>
+    </form>
+  </body>
+</html>

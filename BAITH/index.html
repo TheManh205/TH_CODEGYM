@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8">
+        <title>Gộp ô trong bảng - Rowspan & Colspan</title>
+        <style>
+            /* Định dạng CSS giúp bảng rõ ràng và chuyên nghiệp hơn */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 40px;
+                background-color: #f8f9fa;
+            }
+            h2 {
+                color: #2c3e50;
+            }
+            table {
+                width: 100%;
+                max-width: 500px;
+                border-collapse: collapse; /* Gộp đường viền đôi thành đường viền đơn */
+                background-color: white;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            th, td {
+                padding: 12px 15px;
+                border: 1px solid #dee2e6;
+                text-align: center; /* Căn giữa nội dung các ô */
+            }
+            th {
+                background-color: #007bff;
+                color: white;
+            }
+            /* Tô màu highlight cho ô gộp nghỉ học */
+            td[colspan="2"] {
+                background-color: #fff3cd;
+                color: #856404;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h2>Thời khóa biểu</h2>
+
+        <!-- Khai báo bảng với đường viền cơ bản -->
+        <table border="1">
+            <!-- Hàng 1: Tiêu đề bảng -->
+            <tr>
+                <th>Thứ</th>
+                <th>Môn học</th>
+                <th>Giáo viên</th>
+            </tr>
+
+            <!-- Hàng 2: Thứ Hai - Môn Toán (Gộp 2 hàng ở cột 'Thứ') -->
+            <tr>
+                <td rowspan="2">Thứ Hai</td>
+                <td>Toán</td>
+                <td>Thầy Nam</td>
+            </tr>
+
+            <!-- Hàng 3: Thứ Hai - Môn Văn (Không cần khai báo lại ô 'Thứ') -->
+            <tr>
+                <td>Văn</td>
+                <td>Cô Hạnh</td>
+            </tr>
+
+            <!-- Hàng 4: Thứ Ba - Nghỉ học (Gộp 2 cột 'Môn học' & 'Giáo viên') -->
+            <tr>
+                <td>Thứ Ba</td>
+                <td colspan="2">Nghỉ học</td>
+            </tr>
+        </table>
+
+    </body>
+</html>

@@ -1,0 +1,93 @@
+/* ==========================================================================
+   1. RESET BOX-SIZING & THIẾT LẬP CƠ BẢN
+   ========================================================================== */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9; /* Nền nhạt giúp tôn thẻ sản phẩm */
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   2. ĐỊNH DẠNG KHUNG TỔNG THỂ (.product-card)
+   ========================================================================== */
+.product-card {
+  width: 320px; /* Chiều rộng cố định */
+  margin: 60px auto; /* Căn giữa thẻ sản phẩm ra giữa màn hình */
+  background-color: #ffffff; /* Nền trắng */
+  border: 1px solid #e1e8ed; /* Đường viền nhẹ */
+  border-radius: 12px; /* Bo tròn góc cho hiện đại */
+  overflow: hidden; /* Giúp ảnh không bị tràn qua góc bo */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Đổ bóng nổi bật */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Hiệu ứng nổi nhẹ khi di chuột vào thẻ */
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================================================
+   3. ĐỊNH DẠNG HÌNH ẢNH SẢN PHẨM (.product-img)
+   ========================================================================== */
+.product-img {
+  width: 100%; /* Ảnh vừa khít chiều rộng của thẻ */
+  height: 220px; /* Cố định chiều cao ảnh */
+  object-fit: cover; /* Tránh làm méo tỉ lệ ảnh */
+  display: block; /* Loại bỏ khoảng trống thừa bên dưới ảnh */
+}
+
+/* ==========================================================================
+   4. ĐỊNH DẠNG VÙNG NỘI DUNG VÀ CÁC THÀNH PHẦN BÊN TRONG
+   ========================================================================== */
+.product-content {
+  padding: 20px; /* Tạo khoảng đệm bên trong, tránh dính mép */
+}
+
+/* Tên sản phẩm */
+.product-title {
+  font-size: 1.15rem;
+  color: #2d3748;
+  margin: 0 0 10px 0; /* Margin phía dưới để tạo khoảng cách với giá */
+  line-height: 1.4;
+}
+
+/* Giá sản phẩm */
+.price {
+  color: #e53e3e; /* Màu đỏ cam nổi bật */
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 18px 0; /* Margin-bottom đẩy nút bấm xuống dưới */
+}
+
+/* Nút bấm Thêm vào giỏ hàng (.btn) */
+.btn {
+  display: block; /* Biến thẻ <a> thành Block để chiếm full width */
+  width: 100%;
+  background-color: #3182ce; /* Màu xanh dương chủ đạo */
+  color: #ffffff; /* Màu chữ trắng */
+  text-decoration: none; /* Bỏ gạch chân mặc định của thẻ <a> */
+  text-align: center; /* Căn giữa chữ */
+  padding: 12px 0; /* Tăng vùng bấm cho dễ tương tác */
+  border-radius: 6px; /* Bo tròn góc nút */
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+/* Hiệu ứng :hover cho nút bấm */
+.btn:hover {
+  background-color: #2b6cb0; /* Đổi màu xanh đậm hơn khi rê chuột */
+}

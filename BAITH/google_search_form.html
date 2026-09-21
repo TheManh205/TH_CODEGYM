@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Form Tìm kiếm Google</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+        .search-container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 24px;
+            outline: none;
+        }
+        input[type="text"]:focus {
+            border-color: #4285f4;
+            box-shadow: 0 0 5px rgba(66, 133, 244, 0.5);
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 14px;
+            color: white;
+            background-color: #1a73e8;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 8px;
+        }
+        input[type="submit"]:hover {
+            background-color: #1557b0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="search-container">
+        <h2>Tìm kiếm với Google</h2>
+        <form action="https://www.google.com.vn/search" method="GET"> 
+            <input type="text" name="q" placeholder="Nhập từ khóa tìm kiếm..." required/>
+            <input type="submit" value="Tìm kiếm"/>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* ==========================================================================
+   1. RESET & THIẾT LẬP CĂN GIỮA MÀN HÌNH
+   ========================================================================== */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: grid;
+  place-items: center; /* Căn giữa nút bấm ra giữa màn hình */
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Nền xám nhạt */
+}
+
+/* ==========================================================================
+   2. TRẠNG THÁI MẶC ĐỊNH CỦA NÚT BẤM (.btn)
+   ========================================================================== */
+.btn {
+  display: inline-block; /* Giúp nút nhận đầy đủ padding, margin */
+  background-color: #3498db; /* Màu nền xanh tươi */
+  color: #ffffff; /* Màu chữ trắng */
+  padding: 15px 30px; /* Vùng đệm 15px (trên/dưới) và 30px (trái/phải) */
+  text-decoration: none; /* Bỏ gạch chân mặc định của thẻ <a> */
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px; /* Bo tròn các góc */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+
+  /* Khai báo thuộc tính chuyển cảnh mượt mà trong 0.3s */
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* ==========================================================================
+   3. TRẠNG THÁI KHI DI CHUỘT VÀO (.btn:hover)
+   ========================================================================== */
+.btn:hover {
+  background-color: #2980b9; /* Đổi sang màu xanh đậm hơn */
+  transform: translateY(-3px); /* Nút "nhích" nhẹ lên trên 3px */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Tăng độ bóng khi nổi lên */
+}

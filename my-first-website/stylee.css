@@ -1,0 +1,146 @@
+/* ==========================================================================
+   1. THIẾT LẬP PHONG CÁCH TỔNG THỂ (RESET & GLOBAL)
+   ========================================================================== */
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7; /* Giãn dòng giúp dễ đọc */
+  background-color: #f0f2f5; /* Nền xám xanh nhạt */
+  color: #2d3748; /* Màu chữ xám đen cao cấp */
+  margin: 0;
+  padding: 0;
+}
+
+/* Khối bao bọc trung tâm */
+.container {
+  max-width: 800px;
+  margin: 40px auto; /* Căn giữa theo chiều ngang */
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px; /* Bo tròn nhẹ góc khung */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Bóng đổ mềm mại */
+}
+
+/* ==========================================================================
+   2. KHU VỰC ĐẦU TRANG (HEADER)
+   ========================================================================== */
+
+header {
+  text-align: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #edf2f7;
+  margin-bottom: 30px;
+}
+
+/* Ảnh đại diện hình tròn chuẩn Profile */
+header .avatar {
+  width: 150px;
+  height: 150px;
+  object-fit: cover; /* Tránh móp méo hình ảnh */
+  border-radius: 50%; /* Biến ảnh thành hình tròn */
+  border: 4px solid #3182ce; /* Viền xanh dương nổi bật */
+  box-shadow: 0 4px 12px rgba(49, 130, 206, 0.25);
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #1a202c;
+  margin: 15px 0 5px 0;
+}
+
+header .tagline {
+  color: #718096;
+  font-size: 1.05rem;
+  margin-top: 0;
+}
+
+/* ==========================================================================
+   3. NỘI DUNG CHÍNH (SECTIONS)
+   ========================================================================== */
+
+section {
+  margin-bottom: 30px;
+}
+
+/* Tiêu đề mục có gạch chân trang trí */
+h2 {
+  font-size: 1.35rem;
+  color: #2b6cb0; /* Màu xanh dương chủ đạo */
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+p {
+  margin: 0 0 10px 0;
+}
+
+/* Nổi bật từ ngữ quan trọng */
+strong {
+  color: #2b6cb0;
+  background-color: #ebf8ff; /* Nền xanh nhạt dạng highlight */
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Định dạng Danh sách Sở thích */
+.hobby-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.hobby-list li {
+  background-color: #f7fafc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   4. LIÊN KẾT MẠNG XÃ HỘI (BUTTONS & HOVER)
+   ========================================================================== */
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Xếp hàng ngang */
+  gap: 12px;
+}
+
+/* Định dạng thẻ liên kết dạng nút bấm */
+.social-links a {
+  display: inline-block;
+  color: #2b6cb0;
+  text-decoration: none; /* Bỏ gạch chân mặc định */
+  font-weight: 600;
+  padding: 8px 18px;
+  background-color: #f7fafc;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  transition: all 0.25s ease; /* Hiệu ứng chuyển cảnh mượt */
+}
+
+/* Hiệu ứng :hover khi di chuột qua nút */
+.social-links a:hover {
+  background-color: #2b6cb0;
+  color: #ffffff;
+  border-color: #2b6cb0;
+  transform: translateY(-2px); /* Nẩy nhẹ nút lên trên */
+  box-shadow: 0 4px 10px rgba(43, 108, 176, 0.25);
+}
+
+/* ==========================================================================
+   5. CHÂN TRANG (FOOTER)
+   ========================================================================== */
+
+footer {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #edf2f7;
+  color: #a0aec0;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,55 @@
+/* Quy tắc kiểm tra liên kết: Đổi màu nền toàn trang */
+/* --- 1. Phong cách chung --- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6; /* Tăng khoảng cách giữa các dòng chữ */
+  background-color: #f8f9fa; /* Màu xám rất nhạt cho nền trang */
+  color: #333; /* Màu xám đậm giúp giảm mỏi mắt so với màu đen thuần */
+}
+
+/* --- 2. Bố cục khung thẻ chính --- */
+#recipe-card {
+  width: 800px;
+  margin: 40px auto; /* 40px trên-dưới, auto trái-phải giúp căn giữa khung */
+  background-color: #ffffff;
+  padding: 30px; /* Khoảng cách từ viền vào bên trong nội dung */
+}
+
+/* --- 3. Định dạng Font chữ & Tiêu đề --- */
+h1,
+h2 {
+  font-family: "Georgia", serif;
+  color: #c0392b; /* Màu đỏ đậm chủ đạo */
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid #f1c40f; /* Đường gạch chân trang trí màu vàng */
+  padding-bottom: 5px;
+}
+
+/* --- 4. Bảng biểu --- */
+table {
+  width: 100%; /* Mở rộng bảng vừa với khung cha */
+}
+
+th {
+  text-align: left;
+  background-color: #ecf0f1;
+  padding: 8px;
+}
+
+td {
+  padding: 8px;
+}
+
+/* --- 5. Lớp tiện ích (Class) --- */
+.highlight {
+  color: #e67e22; /* Màu cam làm điểm nhấn */
+  font-weight: bold;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ 1: grid-template-columns</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f6f9;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #1e3a8a;
+        }
+
+        /* Khai báo lưới CSS Grid */
+        .grid-container-1 {
+            display: grid;
+            /* Cột 1: 200px | Cột 2: 1fr (chiếm hết phần còn lại) | Cột 3: 150px */
+            grid-template-columns: 200px 1fr 150px;
+            gap: 15px;
+            background-color: #0f172a;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .grid-item {
+            background-color: #38bdf8;
+            color: #0f172a;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Ví dụ 1: Sử dụng px và fr (Fraction Unit)</h2>
+    <div class="grid-container-1">
+        <div class="grid-item">Cột 1 (200px)</div>
+        <div class="grid-item">Cột 2 (1fr - Linh hoạt)</div>
+        <div class="grid-item">Cột 3 (150px)</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+Mini project: Xây dựng trang "Công thức nấu ăn" chuẩn Semantic
+Mục tiêu
+Dự án này được thiết kế để bạn vận dụng các kiến thức về cấu trúc HTML ngữ nghĩa, bảng biểu và form. Sau khi hoàn thành dự án, bạn sẽ có thể:
+
+Sử dụng thành thạo các thẻ layout ngữ nghĩa như <article>, <section>, <header>, <footer> để phân vùng nội dung một cách logic.
+
+Xây dựng một bảng biểu <table> có cấu trúc tốt để trình bày dữ liệu.
+
+Tạo một form HTML <form> cơ bản để thu thập thông tin từ người dùng.
+
+Củng cố kỹ năng xây dựng một trang web hoàn chỉnh, có cấu trúc chuyên nghiệp.
+
+Bối cảnh
+Hãy tưởng tượng bạn là một blogger ẩm thực và muốn chia sẻ công thức món ăn tủ của mình với thế giới. Bạn cần xây dựng một trang web duy nhất để trình bày công thức này. Trang web không chỉ cần đẹp và dễ đọc với người dùng, mà còn phải được cấu trúc một cách "thông minh" để các công cụ tìm kiếm như Google có thể hiểu và xếp hạng cao, cũng như để các công nghệ hỗ trợ có thể truy cập dễ dàng.
+
+Yêu cầu chi tiết (Checklist)
+Bạn cần tạo một tệp HTML mới (ví dụ: recipe.html) trong thư mục dự án của mình. Trang web này phải đáp ứng đầy đủ các yêu cầu sau:
+
+1. Cấu trúc ngữ nghĩa tổng thể:
+
+[ ] Toàn bộ nội dung của công thức nấu ăn (từ tên món ăn đến các ghi chú cuối cùng) phải được bao bọc trong một thẻ <article>, vì nó là một khối nội dung độc lập và hoàn chỉnh.
+
+[ ] Ngay bên trong <article>, phải có một thẻ <header> chứa:
+
+Tên món ăn (đặt trong thẻ <h1>).
+
+Một đoạn mô tả ngắn về món ăn (đặt trong thẻ <p>).
+
+Một hình ảnh hấp dẫn của món ăn đã hoàn thành (<img> với thuộc tính alt mô tả rõ ràng).
+
+[ ] Dưới cùng của <article>, phải có một thẻ <footer> chứa một vài lời khuyên hoặc ghi chú thêm cho món ăn.
+
+2. Phần Nguyên liệu (sử dụng Bảng biểu):
+
+[ ] Phải có một khu vực "Nguyên liệu", được bao bọc bởi thẻ <section> và có một tiêu đề <h2>.
+
+[ ] Bên trong section này, danh sách các nguyên liệu phải được trình bày bằng một thẻ <table>.
+
+[ ] Bảng này phải có cấu trúc ngữ nghĩa rõ ràng, sử dụng <thead> cho phần tiêu đề và <tbody> cho phần thân.
+
+[ ] Phần <thead> phải chứa một hàng <tr> với các ô tiêu đề <th> (ví dụ: "Tên nguyên liệu", "Số lượng", "Đơn vị").
+
+[ ] Phần <tbody> phải chứa nhiều hàng <tr>, mỗi hàng dành cho một loại nguyên liệu, với các ô dữ liệu <td> tương ứng.
+
+3. Phần Hướng dẫn (sử dụng Danh sách có thứ tự):
+
+[ ] Phải có một khu vực "Các bước thực hiện", được bao bọc bởi một thẻ <section> khác và có một tiêu đề <h2>.
+
+[ ] Các bước hướng dẫn phải được trình bày bằng một danh sách có thứ tự (<ol>), vì trình tự thực hiện là rất quan trọng.
+
+[ ] Mỗi bước thực hiện là một mục danh sách <li>.
+
+4. Form Phản hồi:
+
+[ ] Bên dưới thẻ <article>, phải có một Form phản hồi đơn giản được bao bọc bởi thẻ <form>.
+
+[ ] Form này phải có các trường sau:
+
+Tên người gửi (<input type="text">).
+
+Đánh giá món ăn (sử dụng một nhóm các <input type="radio"> cho các lựa chọn từ 1 đến 5 sao).
+
+Ô bình luận (<textarea>).
+
+[ ] Tất cả các trường nhập liệu trên phải có một thẻ <label> tương ứng được liên kết chính xác bằng for và id.
+
+[ ] Form phải có một nút gửi đi (<button type="submit">).
+
+Gợi ý và Hướng dẫn
+Chọn một công thức thật: Hãy chọn một món ăn bạn thực sự yêu thích! Việc này sẽ khiến dự án trở nên thú vị hơn.
+
+Phác thảo trước: Vẽ bố cục trang ra giấy và đánh dấu các khu vực dự định sẽ là <article>, <section>, <table>, v.v.
+
+Tập trung vào cấu trúc: Mục tiêu chính là HTML ngữ nghĩa. Đừng lo lắng về màu sắc hay font chữ.
+
+Kiểm tra từng phần: Hoàn thành phần nào, hãy dùng Live Server để xem ngay kết quả phần đó, thay vì làm hết rồi mới kiểm tra.
+
+Mã nguồn tham khảo (Cấu trúc gợi ý)
+<body>
+  <article>
+    <header>
+      <h1>Tên Món Ăn</h1>
+      <p>Mô tả ngắn về món ăn...</p>
+      <img src="images/ten-mon-an.jpg" alt="Mô tả hình ảnh món ăn">
+    </header>
+
+    <section>
+      <h2>Nguyên liệu</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tên nguyên liệu</th>
+            <th>Số lượng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nguyên liệu 1</td>
+            <td>...</td>
+          </tr>
+          </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Các bước thực hiện</h2>
+      <ol>
+        <li>Bước 1...</li>
+        <li>Bước 2...</li>
+        </ol>
+    </section>
+
+    <footer>
+      <p>Mẹo nhỏ: Bạn có thể...</p>
+    </footer>
+  </article>
+
+  <hr> <section>
+    <h2>Để lại phản hồi của bạn</h2>
+    <form action="#" method="post">
+      <button type="submit">Gửi phản hồi</button>
+    </form>
+  </section>
+
+</body>
+Chúc bạn tạo ra một trang công thức thật "ngon mắt" và chuẩn cấu trúc! Đây là một dự án tổng hợp tuyệt vời để chứng tỏ bạn đã thực sự làm chủ các khái niệm HTML quan trọng.
+
+Hãy ghi chú lại những bước mà bạn đã thực hiện.
