@@ -1,0 +1,81 @@
+/* --- 1. Reset CSS & Thiết lập cơ bản --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a; /* Nền tối giúp nổi bật màu sắc ảnh */
+  color: #f8fafc;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+/* Header tiêu đề */
+.gallery-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gallery-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.gallery-header p {
+  color: #94a3b8;
+}
+
+/* --- 2. Container Thư viện (Flex Container) --- */
+.gallery-container {
+  display: flex; /* [QUAN TRỌNG] Kích hoạt Flexbox */
+  flex-wrap: wrap; /* [QUAN TRỌNG] Tự động xuống hàng khi thiếu khoảng trống */
+  justify-content: center; /* Căn giữa các item trên hàng */
+  gap: 20px; /* Tạo khoảng cách đồng đều 20px giữa các ảnh */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- 3. Flex Item (.gallery-item) --- */
+.gallery-item {
+  /* 
+    flex: 1 1 300px;
+    - flex-grow: 1 (Lớn lên để lấp đầy khoảng trống)
+    - flex-shrink: 1 (Co lại khi màn hình nhỏ)
+    - flex-basis: 300px (Kích thước gốc lý tưởng trước khi chia lại không gian)
+  */
+  flex: 1 1 300px;
+  height: 250px; /* Chiều cao cố định cho khung chứa ảnh */
+  border-radius: 12px;
+  overflow: hidden; /* Cắt phần ảnh thừa khi phóng to (zoom) */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* --- 4. Định dạng Hình ảnh (<img>) --- */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* [QUAN TRỌNG] Phủ kín khung chứa mà không làm méo tỷ lệ ảnh */
+  display: block;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+/* --- 5. Hiệu ứng Hover tương tác --- */
+.gallery-item:hover {
+  transform: translateY(-5px); /* Nổi khung nhẹ lên trên */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08); /* Phóng to nhẹ ảnh bên trong */
+  opacity: 0.9;
+}
