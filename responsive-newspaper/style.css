@@ -1,0 +1,71 @@
+/* --- 1. Reset CSS & Styles cơ bản --- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8fafc;
+}
+
+.page-container > * {
+  background-color: #f0f8ff;
+  border: 1px solid #a2c1d8;
+  padding: 20px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* --- 2. DESKTOP LAYOUT (Màn hình lớn: Mặc định 4 cột) --- */
+.page-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Lưới 4 cột đều nhau */
+  gap: 15px;
+  padding: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header & Footer trải dài toàn bộ 4 cột */
+.header,
+.footer {
+  grid-column: 1 / -1;
+}
+
+/* Bài viết chính chiếm 3 cột đầu */
+.main-article {
+  grid-column: 1 / 4;
+  min-height: 300px;
+  text-align: left;
+}
+
+/* 2 Bài viết phụ đặt ở cột thứ 4 */
+.side-article-1,
+.side-article-2 {
+  grid-column: 4 / 5;
+  text-align: left;
+}
+
+/* --- 3. MEDIA QUERY CHO MOBILE (Màn hình <= 800px) --- */
+@media (max-width: 800px) {
+  /* Chuyển toàn bộ khung chứa về layout 1 cột */
+  .page-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reset lại vị trí cột của tất cả các khối để chúng tự động xếp chồng từ trên xuống */
+  .header,
+  .footer,
+  .main-article,
+  .side-article-1,
+  .side-article-2 {
+    grid-column: auto;
+  }
+}
