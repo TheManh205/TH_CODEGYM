@@ -1,0 +1,135 @@
+/* --- 1. Reset & Style Cơ Bản --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+/* --- 2. BỐ CỤC TỔNG THỂ (Macro Grid Container) --- */
+.page-container {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 cột duy nhất bao phủ toàn trang */
+  grid-template-rows: auto 1fr auto; /* Header, Footer theo nội dung; Content chiếm hết không gian giữa */
+  min-height: 100vh; /* Luôn lấp đầy chiều cao màn hình */
+}
+
+/* Header & Footer */
+.header {
+  grid-column: 1 / -1; /* Trải dài từ đường kẻ đầu đến đường kẻ cuối */
+  background-color: #1e293b;
+  padding: 30px 20px;
+  text-align: center;
+  border-bottom: 2px solid #334155;
+}
+
+.header h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #38bdf8;
+}
+
+.header p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-top: 5px;
+}
+
+.footer {
+  grid-column: 1 / -1;
+  background-color: #1e293b;
+  padding: 20px;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+  border-top: 1px solid #334155;
+}
+
+/* --- 3. LƯỚI NỘI DUNG CHÍNH (Nested Micro Grid) --- */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Lưới 4 cột đều nhau */
+  grid-auto-rows: 180px; /* Chiều cao chuẩn mỗi hàng là 180px */
+  gap: 16px; /* Khoảng cách giữa các bài báo */
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto; /* Căn giữa toàn bộ lưới nội dung */
+  width: 100%;
+}
+
+/* --- 4. ĐỊNH DẠNG BÀI BÁO (.card) --- */
+.card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+  box-shadow: 0 12px 20px -5px rgba(56, 189, 248, 0.15);
+}
+
+.badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: #0284c7;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.card h2,
+.card h3 {
+  font-weight: 600;
+  line-height: 1.4;
+  color: #f1f5f9;
+}
+
+.card h2 {
+  font-size: 1.3rem;
+}
+.card h3 {
+  font-size: 1.05rem;
+}
+
+/* --- 5. BỐ CỤC BẤT ĐỐI XỨNG (MOSAIC LAYOUT) --- */
+
+/* Bài 1: Bài viết tiêu điểm - Rộng 2 cột x Cao 2 hàng */
+.card-1 {
+  grid-column: span 2;
+  grid-row: span 2;
+  background: linear-gradient(135deg, #0284c7 0%, #1e293b 100%);
+}
+
+/* Bài 2: Chiếm 2 cột chiều ngang */
+.card-2 {
+  grid-column: span 2;
+}
+
+/* Bài 4: Bài đặc biệt - Cao 2 hàng chiều dọc */
+.card-4 {
+  grid-row: span 2;
+  background: linear-gradient(180deg, #334155 0%, #1e293b 100%);
+}
