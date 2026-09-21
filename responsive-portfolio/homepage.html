@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Thẻ meta viewport bắt buộc cho Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Portfolio - Web Developer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <h1>🚀 ALEX NGUYEN</h1>
+        <p>Frontend Developer & UI/UX Enthusiast</p>
+      </div>
+    </header>
+
+    <!-- Lưới nội dung chính -->
+    <main class="content-grid">
+      <!-- CARD 1: Sử dụng kỹ thuật Art Direction với thẻ <picture> -->
+      <article class="card card-1">
+        <picture class="card-media">
+          <!-- Ảnh ngang dành cho Desktop & Tablet (min-width: 768px) -->
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80
+            "
+          />
+          <!-- Ảnh dọc tối ưu cho Mobile (mặc định) -->
+          <img
+            src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80"
+            alt="Dự án Hệ thống quản lý tin tức"
+            class="card-img"
+            loading="lazy"
+          />
+        </picture>
+        <div class="card-body">
+          <span class="badge">Featured Project</span>
+          <h2>Hệ thống Tờ báo Online & CMS</h2>
+          <p>
+            Ứng dụng quản lý bài viết và tối ưu hóa trải nghiệm đọc báo trên đa
+            thiết bị.
+          </p>
+        </div>
+      </article>
+
+      <article class="card card-2">
+        <div class="card-body">
+          <span class="badge">Web App</span>
+          <h3>E-Commerce Dashboard</h3>
+          <p>Bảng điều khiển phân tích doanh thu bán hàng thời gian thực.</p>
+        </div>
+      </article>
+
+      <article class="card card-3">
+        <div class="card-body">
+          <span class="badge">UI Design</span>
+          <h3>Bento Box System</h3>
+          <p>Bộ Thư viện thiết kế UI theo phong cách Bento Box hiện đại.</p>
+        </div>
+      </article>
+
+      <article class="card card-4">
+        <div class="card-body">
+          <span class="badge">Mobile Case Study</span>
+          <h2>Ứng dụng Quản lý Tài chính Cá nhân</h2>
+          <p>Giao diện ứng dụng di động theo dõi chi tiêu thông minh.</p>
+        </div>
+      </article>
+
+      <article class="card card-5">
+        <div class="card-body">
+          <span class="badge">Tooling</span>
+          <h3>CSS Grid Generator CLI</h3>
+          <p>
+            Công cụ tự động hóa việc tạo mã khung lưới CSS Grid từ Terminal.
+          </p>
+        </div>
+      </article>
+
+      <article class="card card-6">
+        <div class="card-body">
+          <span class="badge">Open Source</span>
+          <h3>Responsive Nav Component</h3>
+          <p>
+            Component menu điều hướng thuần HTML/CSS không phụ thuộc JavaScript.
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        &copy; 2026 Alex Nguyen. Built with CSS Grid & Mobile-First Approach.
+      </p>
+    </footer>
+  </body>
+</html>

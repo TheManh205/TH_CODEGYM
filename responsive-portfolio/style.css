@@ -1,0 +1,201 @@
+/* ==========================================
+   1. RESET & BASE STYLES (Cơ bản)
+   ========================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%; /* Default 16px -> 1rem = 16px */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  background-color: #0f172a;
+  color: #f8fafc;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   2. MOBILE LAYOUT (Default - Mặc định < 768px)
+   ========================================== */
+
+/* Macro Grid Container */
+.page-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+  background-color: #1e293b;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #334155;
+}
+
+.header h1 {
+  font-size: 1.75rem;
+  color: #38bdf8;
+  margin-bottom: 0.25rem;
+}
+
+.header p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #1e293b;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.875rem;
+  border-top: 1px solid #334155;
+}
+
+/* Inner Micro Grid (Main Content) */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mặc định mobile 1 cột */
+  gap: 1.25rem;
+  padding: 1.25rem;
+  width: 100%;
+}
+
+/* Card General Style */
+.card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  color: #f1f5f9;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  color: #f1f5f9;
+}
+
+.card p {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.badge {
+  align-self: flex-start;
+  background-color: #0284c7;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.625rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Image / Art Direction */
+.card-media {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================
+   3. TABLET LAYOUT (min-width: 768px)
+   ========================================== */
+@media (min-width: 768px) {
+  .header {
+    padding: 3rem 2rem;
+  }
+
+  .header h1 {
+    font-size: 2.25rem;
+  }
+
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr); /* Chuyển thành 2 cột */
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  /* Card 1 mở rộng full chiều ngang ở Tablet */
+  .card-1 {
+    grid-column: span 2;
+  }
+}
+
+/* ==========================================
+   4. DESKTOP LAYOUT (min-width: 1024px)
+   ========================================== */
+@media (min-width: 1024px) {
+  /* Giới hạn độ rộng tối đa và căn giữa nội dung chính */
+  .content-grid {
+    grid-template-columns: repeat(4, 1fr); /* Chuyển thành 4 cột bất đối xứng */
+    grid-auto-rows: 220px;
+    gap: 1.25rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: #38bdf8;
+  }
+
+  /* Sắp xếp Bento Mosaic bất đối xứng */
+  .card-1 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .card-1 .card-media {
+    height: 100%; /* Mở rộng tỉ lệ ảnh vừa khít 2 hàng */
+  }
+
+  .card-2 {
+    grid-column: span 2;
+  }
+
+  .card-4 {
+    grid-row: span 2;
+  }
+}
