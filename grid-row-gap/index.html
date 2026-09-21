@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành CSS grid-row-gap Property</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Thực hành Thuộc tính grid-row-gap</h1>
+
+    <!-- 1. Giá trị Length (Đơn vị cố định) -->
+    <section class="demo-card">
+      <h2>1. Giá trị Length (grid-row-gap: 20px)</h2>
+      <div class="grid-container gap-length">
+        <div class="item">Hàng 1 - Ô 1</div>
+        <div class="item">Hàng 1 - Ô 2</div>
+        <div class="item">Hàng 2 - Ô 1</div>
+        <div class="item">Hàng 2 - Ô 2</div>
+      </div>
+    </section>
+
+    <!-- 2. Giá trị Percentage (Phần trăm) -->
+    <section class="demo-card">
+      <h2>2. Giá trị Percentage (grid-row-gap: 5%)</h2>
+      <div class="grid-container gap-percentage">
+        <div class="item">Hàng 1 - Ô 1</div>
+        <div class="item">Hàng 1 - Ô 2</div>
+        <div class="item">Hàng 2 - Ô 1</div>
+        <div class="item">Hàng 2 - Ô 2</div>
+      </div>
+    </section>
+
+    <!-- 3. Giá trị Global Value (Kế thừa / Mặc định) -->
+    <section class="demo-card parent-wrapper">
+      <h2>3. Giá trị Global Value (grid-row-gap: inherit)</h2>
+      <div class="grid-container gap-global">
+        <div class="item">Hàng 1 - Ô 1</div>
+        <div class="item">Hàng 1 - Ô 2</div>
+        <div class="item">Hàng 2 - Ô 1</div>
+        <div class="item">Hàng 2 - Ô 2</div>
+      </div>
+    </section>
+  </body>
+</html>

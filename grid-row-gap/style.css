@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f8fafc;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.demo-card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.demo-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #334155;
+}
+
+/* Cấu hình chung cho Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #cbd5e1;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.item {
+  background-color: #2563eb;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* 1. Length: Đặt khoảng cách hàng theo px */
+.gap-length {
+  grid-row-gap: 20px;
+}
+
+/* 2. Percentage: Đặt khoảng cách hàng theo phần trăm */
+.gap-percentage {
+  grid-row-gap: 5%;
+}
+
+/* 3. Global Value: Kế thừa giá trị từ phần tử cha */
+.parent-wrapper {
+  grid-row-gap: 30px; /* Định nghĩa thuộc tính ở phần tử cha */
+}
+
+.gap-global {
+  grid-row-gap: inherit; /* Kế thừa giá trị 30px từ parent-wrapper */
+}
