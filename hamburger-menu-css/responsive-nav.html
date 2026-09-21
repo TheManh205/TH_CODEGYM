@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navigation với Hamburger Menu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="#" class="logo">MyBrand</a>
+
+      <!-- Checkbox ẩn điều khiển trạng thái bật/tắt -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+      <!-- Label đóng vai trò nút nhấn Hamburger -->
+      <label
+        for="menu-toggle"
+        class="hamburger-menu"
+        aria-label="Toggle Navigation"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+
+      <!-- Menu điều hướng -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Sản phẩm</a></li>
+          <li><a href="#">Dịch vụ</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>

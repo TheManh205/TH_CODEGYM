@@ -1,0 +1,134 @@
+/* --- 1. Reset CSS & Thiết lập cơ bản (Mobile First) --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Header container */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e293b;
+  padding: 15px 20px;
+  color: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  color: #38bdf8;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Ẩn hoàn toàn Checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* --- 2. GIAO DIỆN MOBILE (Nút Hamburger & Dropdown Menu) --- */
+
+/* Icon Hamburger */
+.hamburger-menu {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+}
+
+.hamburger-menu .bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Menu trượt trên Mobile */
+.main-nav {
+  position: absolute;
+  top: 100%; /* Đặt ngay bên dưới Header */
+  left: 0;
+  width: 100%;
+  background-color: #334155;
+  /* Giấu menu lên phía trên màn hình bằng transform */
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  z-index: -1;
+}
+
+.main-nav ul {
+  list-style: none;
+}
+
+.main-nav a {
+  display: block;
+  padding: 15px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid #475569;
+  transition: background-color 0.2s ease;
+}
+
+.main-nav a:hover {
+  background-color: #0284c7;
+}
+
+/* --- LOGIC HIỂN THỊ (Checkbox Hack) --- */
+/* Khi Checkbox được tích (:checked), hiển thị .main-nav thông qua bộ chọn anh em (~) */
+.menu-toggle:checked ~ .main-nav {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --- 3. GIAO DIỆN DESKTOP (Màn hình >= 768px) --- */
+@media (min-width: 768px) {
+  /* Ẩn nút Hamburger trên Desktop */
+  .hamburger-menu {
+    display: none;
+  }
+
+  /* Khôi phục vị trí chuẩn cho Navigation */
+  .main-nav {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    width: auto;
+    background-color: transparent;
+    z-index: auto;
+  }
+
+  /* Chuyển các mục menu thành hàng ngang */
+  .main-nav ul {
+    display: flex;
+    gap: 10px;
+  }
+
+  .main-nav a {
+    border-bottom: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+  }
+
+  .main-nav a:hover {
+    background-color: #334155;
+  }
+}
