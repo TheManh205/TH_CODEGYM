@@ -1,0 +1,78 @@
+/* --- 1. Reset CSS & Thiết lập cơ bản --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+}
+
+/* --- 2. Định dạng Menu chính --- */
+.main-nav {
+  background-color: #1e293b; /* Màu nền thanh nav */
+}
+
+.main-nav ul {
+  list-style: none; /* Bỏ chấm tròn mặc định của danh sách */
+}
+
+/* Các mục menu cấp 1 nằm ngang */
+.main-nav > ul > li {
+  display: inline-block;
+  position: relative; /* [QUAN TRỌNG] Khối tham chiếu cho menu con */
+}
+
+/* Định dạng thẻ <a> của Menu chính */
+.main-nav a {
+  display: block;
+  padding: 15px 25px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+/* Hiệu ứng hover cho các mục menu chính */
+.main-nav > ul > li:hover > a {
+  background-color: #334155;
+}
+
+/* --- 3. Định dạng và Ẩn/Hiện Menu con (Dropdown) --- */
+.dropdown {
+  position: absolute; /* [QUAN TRỌNG] Định vị tuyệt đối theo li.has-dropdown */
+  top: 100%; /* Đặt menu con nằm ngay bên dưới menu cha */
+  left: 0;
+  width: 200px; /* Chiều rộng cố định cho menu con */
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Đổ bóng tạo hiệu ứng nổi */
+  border-radius: 0 0 6px 6px;
+  z-index: 10; /* Đảm bảo đè lên các nội dung khác */
+
+  display: none; /* [QUAN TRỌNG] Mặc định ẩn menu con đi */
+}
+
+/* Các mục trong menu con xếp theo chiều dọc */
+.dropdown li {
+  display: block;
+}
+
+/* Thẻ <a> bên trong menu con */
+.dropdown a {
+  color: #334155;
+  padding: 12px 20px;
+  font-size: 14px;
+}
+
+/* Hiệu ứng hover cho từng mục trong menu con */
+.dropdown a:hover {
+  background-color: #f1f5f9;
+  color: #2563eb;
+}
+
+/* --- 4. LOGIC CỐT LÕI: Hiển thị Dropdown khi hover vào li cha --- */
+.has-dropdown:hover .dropdown {
+  display: block; /* Hiện lại menu con khi rê chuột vào mục Sản phẩm */
+}
