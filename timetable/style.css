@@ -1,0 +1,49 @@
+/* Reset và thiết lập body */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Định dạng Bảng biểu --- */
+table {
+  width: 80%;
+  margin: 40px auto;
+  border-collapse: collapse; /* Gộp các ô sát nhau */
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+thead th {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* --- Hiệu ứng Ngựa vằn (:nth-child) --- */
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Hàng chẵn xám nhạt */
+}
+
+/* --- Hiệu ứng Hover hàng --- */
+tbody tr:hover {
+  background-color: #e2e2e2; /* Nổi bật khi di chuột */
+}
