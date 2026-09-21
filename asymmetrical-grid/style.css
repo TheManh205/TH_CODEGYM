@@ -1,0 +1,84 @@
+/* --- 1. Reset & Thiết lập cơ bản --- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #1e1e2e;
+  font-family: Arial, sans-serif;
+}
+
+/* Định dạng chung cho các item */
+.item {
+  padding: 20px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Tô màu riêng cho từng item */
+.item-1 {
+  background-color: #e63946;
+}
+.item-2 {
+  background-color: #1d3557;
+}
+.item-3 {
+  background-color: #2a9d8f;
+}
+.item-4 {
+  background-color: #f4a261;
+}
+.item-5 {
+  background-color: #9c89b8;
+}
+.item-6 {
+  background-color: #457b9d;
+}
+
+/* --- 2. THIẾT LẬP KÍCH THƯỚC LƯỚI & SẮP XẾP BẤT ĐỐI XỨNG --- */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Tạo 4 cột có độ rộng bằng nhau */
+  grid-auto-rows: 120px; /* Hàng tự động tạo có chiều cao cố định 120px */
+  gap: 12px; /* Khoảng cách giữa các ô */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Item 1: Ô nổi bật chính - Chiếm 2 cột x 2 hàng */
+.item-1 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* Item 3: Chiếm chiều ngang 2 cột */
+.item-3 {
+  grid-column: span 2;
+}
+
+/* Item 4: Chiếm chiều cao 2 hàng */
+.item-4 {
+  grid-row: span 2;
+}
