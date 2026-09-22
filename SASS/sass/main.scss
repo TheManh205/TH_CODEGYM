@@ -2,11 +2,8 @@
 @use "abstracts" as *;
 
 // 2. Base
-@use "base/reset";
+@use "base/typography";
 
-// 3. Layout
-@use "layout/container";
-
-// 4. Components
+// 3. Components
 @use "components/buttons";
 @use "components/cards";

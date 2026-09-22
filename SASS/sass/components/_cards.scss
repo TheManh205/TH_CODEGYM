@@ -1,7 +1,5 @@
 @use "../abstracts" as *;
 
 .card {
-  border: 1px solid $border-color;
-  padding: 20px;
-  @include box-shadow;
+  @include box-style;
 }
