@@ -1,5 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@use "../abstracts" as *;
+
+body {
+  font-family: Arial, sans-serif;
+  color: $text-color;
+  background: $background-color;
 }
