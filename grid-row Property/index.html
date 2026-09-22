@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành CSS grid-row Property</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Thực hành Thuộc tính grid-row (Shorthand)</h1>
+
+    <!-- 1. Chỉ định chính xác vị trí hàng bắt đầu và kết thúc (column-line/row-line) -->
+    <section class="demo-card">
+      <h2>1. Xác định vị trí hàng cụ thể (grid-row: 1 / 3)</h2>
+      <p>Item 1 sẽ bắt đầu ở hàng 1 và kết thúc trước hàng 3 (chiếm 2 hàng).</p>
+      <div class="grid-container">
+        <div class="item item-exact">Item 1 (Hàng 1 đến 3)</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+      </div>
+    </section>
+
+    <!-- 2. Sử dụng từ khóa 'span' để kéo dài qua số lượng hàng chỉ định -->
+    <section class="demo-card">
+      <h2>2. Sử dụng từ khóa span (grid-row: 2 / span 2)</h2>
+      <p>Item 1 bắt đầu ở hàng 2 và kéo dài qua 2 hàng.</p>
+      <div class="grid-container">
+        <div class="item item-span">Item 1 (Bắt đầu hàng 2, span 2)</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+      </div>
+    </section>
+
+    <!-- 3. Mặc định hoặc tự động sắp xếp (auto) -->
+    <section class="demo-card">
+      <h2>3. Giá trị mặc định (grid-row: auto / auto)</h2>
+      <p>Item sắp xếp tự động theo luồng mặc định của grid.</p>
+      <div class="grid-container">
+        <div class="item item-auto">Item 1 (auto)</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+      </div>
+    </section>
+  </body>
+</html>
