@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành CSS grid-gap Property</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Thực hành Thuộc tính grid-gap</h1>
+
+    <!-- Ví dụ 1: Đặt khoảng cách chung cho cả hàng và cột (1 giá trị) -->
+    <section class="demo-card">
+      <h2>
+        Ví dụ 1: Đặt khoảng cách bằng nhau cho Hàng và Cột (grid-gap: 20px)
+      </h2>
+      <p>Khoảng cách hàng: 20px | Khoảng cách cột: 20px</p>
+      <div class="grid-container gap-equal">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+      </div>
+    </section>
+
+    <!-- Ví dụ 2: Đặt khoảng cách riêng biệt cho hàng và cột (2 giá trị) -->
+    <section class="demo-card">
+      <h2>
+        Ví dụ 2: Đặt khoảng cách khác nhau cho Hàng và Cột (grid-gap: 30px 10px)
+      </h2>
+      <p>
+        Khoảng cách hàng (grid-row-gap): 30px | Khoảng cách cột
+        (grid-column-gap): 10px
+      </p>
+      <div class="grid-container gap-different">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+      </div>
+    </section>
+  </body>
+</html>
