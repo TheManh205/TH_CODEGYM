@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>W3Schools Layout Simulation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 1. Header Section -->
+    <header class="header">
+      <div class="logo"><span class="logo-w3">W3</span>Schools Demo</div>
+      <div class="header-search">
+        <input type="text" placeholder="Search our tutorials, e.g. HTML..." />
+        <button>Search</button>
+      </div>
+      <div class="user-actions">
+        <a href="#" class="btn-login">Log in</a>
+      </div>
+    </header>
+
+    <!-- 2. Main Navigation (Bar ngang) -->
+    <nav class="topnav">
+      <a href="#" class="active">HTML</a>
+      <a href="#">CSS</a>
+      <a href="#">JAVASCRIPT</a>
+      <a href="#">SQL</a>
+      <a href="#">PYTHON</a>
+      <a href="#">JAVA</a>
+      <a href="#">PHP</a>
+    </nav>
+
+    <!-- 3. Layout Nội dung chính: Sidebar + Content -->
+    <div class="main-container">
+      <!-- Sidebar bên trái -->
+      <aside class="sidebar">
+        <h3 class="sidebar-title">HTML Tutorial</h3>
+        <a href="#" class="active">HTML HOME</a>
+        <a href="#">HTML Introduction</a>
+        <a href="#">HTML Editors</a>
+        <a href="#">HTML Basic</a>
+        <a href="#">HTML Elements</a>
+        <a href="#">HTML Attributes</a>
+        <a href="#">HTML Headings</a>
+        <a href="#">HTML Paragraphs</a>
+        <a href="#">HTML Styles</a>
+        <a href="#">HTML Formatting</a>
+      </aside>
+
+      <!-- Main Content ở giữa -->
+      <main class="content">
+        <h1>HTML Tutorial</h1>
+        <p class="subtitle">
+          HTML is the standard markup language for Web pages.
+        </p>
+
+        <div class="card-example">
+          <h2>Easy Learning with HTML "Try it Yourself"</h2>
+          <p>
+            With our online code editor, you can edit the HTML code and view the
+            result in your browser.
+          </p>
+
+          <div class="code-box">
+            <code>
+              &lt;!DOCTYPE html&gt;<br />
+              &lt;html&gt;<br />
+              &lt;head&gt;<br />
+              &nbsp;&nbsp;&lt;title&gt;Page Title&lt;/title&gt;<br />
+              &lt;/head&gt;<br />
+              &lt;body&gt;<br /><br />
+              &nbsp;&nbsp;&lt;h1&gt;This is a Heading&lt;/h1&gt;<br />
+              &nbsp;&nbsp;&lt;p&gt;This is a paragraph.&lt;/p&gt;<br /><br />
+              &lt;/body&gt;<br />
+              &lt;/html&gt;
+            </code>
+          </div>
+
+          <button class="btn-try">Try it Yourself &raquo;</button>
+        </div>
+      </main>
+    </div>
+
+    <!-- 4. Footer Section -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="#">QUIZZES</a> | <a href="#">EXERCISES</a> |
+        <a href="#">CERTIFICATES</a> |
+        <a href="#">FORUMS</a>
+      </div>
+      <p class="copyright">
+        Copyright &copy; 1999-2026 by W3Schools Demo. All Rights Reserved.
+      </p>
+    </footer>
+  </body>
+</html>
