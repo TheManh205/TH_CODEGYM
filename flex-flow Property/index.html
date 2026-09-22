@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành CSS flex-flow Property</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Thực hành Thuộc tính flex-flow</h1>
+
+    <!-- 1. Giá trị row nowrap (Mặc định) -->
+    <section class="demo-card">
+      <h2>1. flex-flow: row nowrap (Mặc định)</h2>
+      <p>Sắp xếp theo hàng ngang, không ngắt dòng.</p>
+      <div class="flex-container flow-row-nowrap">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+      </div>
+    </section>
+
+    <!-- 2. Giá trị row-reverse nowrap -->
+    <section class="demo-card">
+      <h2>2. flex-flow: row-reverse nowrap</h2>
+      <p>Sắp xếp theo hàng ngang đảo ngược thứ tự, không ngắt dòng.</p>
+      <div class="flex-container flow-row-reverse-nowrap">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+      </div>
+    </section>
+
+    <!-- 3. Mở rộng: flex-flow: row wrap -->
+    <section class="demo-card">
+      <h2>3. flex-flow: row wrap</h2>
+      <p>Sắp xếp theo hàng ngang và cho phép ngắt xuống dòng mới.</p>
+      <div class="flex-container flow-row-wrap">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+      </div>
+    </section>
+
+    <!-- 4. Mở rộng: flex-flow: column wrap -->
+    <section class="demo-card">
+      <h2>4. flex-flow: column wrap</h2>
+      <p>Sắp xếp theo cột dọc và ngắt sang cột mới khi hết chiều cao.</p>
+      <div class="flex-container flow-column-wrap">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+      </div>
+    </section>
+  </body>
+</html>
