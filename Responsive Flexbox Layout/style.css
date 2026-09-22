@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* Khung bọc toàn trang xếp theo chiều dọc */
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 1. Header */
+.header {
+  background-color: #0f172a;
+  color: #ffffff;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+/* 2. Navigation */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #1e293b;
+  padding: 12px 16px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #f8fafc;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: #38bdf8;
+}
+
+/* 3 & 4. Main Body Layout (Flex Row trên Desktop) */
+.body-container {
+  display: flex;
+  flex: 1; /* Tự co giãn để lấp đầy khoảng trống giữa nav và footer */
+}
+
+.content {
+  flex: 3; /* Chiếm 3 phần chiều rộng */
+  padding: 24px;
+  background-color: #ffffff;
+}
+
+.content h2 {
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.sidebar {
+  flex: 1; /* Chiếm 1 phần chiều rộng */
+  padding: 24px;
+  background-color: #e2e8f0;
+}
+
+.sidebar h3 {
+  margin-bottom: 12px;
+  color: #334155;
+}
+
+/* 5. Footer */
+.footer {
+  background-color: #0f172a;
+  color: #ffffff;
+  text-align: center;
+  padding: 16px;
+}
+
+/* Responsive trên Mobile (< 768px) */
+@media (max-width: 768px) {
+  .body-container {
+    flex-direction: column; /* Chuyển main content và sidebar thành hàng dọc */
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}
