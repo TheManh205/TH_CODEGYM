@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Grid System Layout</title>
+    <!-- Bootstrap CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body class="bg-light">
+    <!-- Header Section -->
+    <header class="bg-primary text-white text-center py-4">
+      <div class="container">
+        <h1 class="display-5 fw-bold mb-0">Trang Web Mẫu Bootstrap Grid</h1>
+      </div>
+    </header>
+
+    <!-- Navbar với Dropdown Menu -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">MyWebsite</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Trang Chủ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Giới Thiệu</a>
+            </li>
+            <!-- Dropdown Menu -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dịch Vụ
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Thiết Kế Web</a></li>
+                <li><a class="dropdown-item" href="#">Lập Trình Mobile</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Tư Vấn IT</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Liên Hệ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Container chia Cột bằng Grid System -->
+    <main class="container my-5">
+      <div class="row g-4">
+        <!-- Main Content: Chiếm 8/12 cột trên màn hình lớn, 12/12 trên màn hình nhỏ -->
+        <section class="col-12 col-lg-8">
+          <div class="card p-4 shadow-sm border-0 mb-4">
+            <h2 class="card-title fw-bold border-bottom pb-2 mb-3">
+              Bài Viết Chính
+            </h2>
+            <p class="card-text">
+              Bootstrap Grid System xây dựng dựa trên cấu trúc Flexbox, cho phép
+              tạo tới 12 cột linh hoạt. Hệ thống này giúp bố cục website tự động
+              tùy biến độ rộng theo kích thước màn hình thiết bị từ Mobile,
+              Tablet đến Desktop.
+            </p>
+            <p class="card-text">
+              Khi hiển thị trên màn hình rộng (Large screens $\ge
+              992\text{px}$), cột nội dung chính này sẽ chiếm $\dfrac{8}{12}$
+              chiều rộng khung hình. Trong khi đó, trên các thiết bị di động nhỏ
+              hơn, nó sẽ chiếm trọn $12/12$ cột để tối ưu không gian đọc nội
+              dung.
+            </p>
+            <a href="#" class="btn btn-primary col-auto align-self-start"
+              >Đọc thêm...</a
+            >
+          </div>
+
+          <div class="card p-4 shadow-sm border-0">
+            <h3 class="h4 card-title border-bottom pb-2 mb-3">
+              Dự Án Mới Nhất
+            </h3>
+            <p class="card-text">
+              Sử dụng các lớp tiện ích (utility classes) của Bootstrap như
+              <code>col-12 col-lg-8</code> giúp bạn quản lý điểm gãy (responsive
+              breakpoints) một cách dễ dàng và chuẩn xác.
+            </p>
+          </div>
+        </section>
+
+        <!-- Sidebar: Chiếm 4/12 cột trên màn hình lớn, nằm bên dưới trên màn hình nhỏ -->
+        <aside class="col-12 col-lg-4">
+          <div class="card p-4 shadow-sm border-0 mb-4 bg-white">
+            <h3 class="h5 card-title fw-bold border-bottom pb-2 mb-3">
+              Thanh Bên (Sidebar)
+            </h3>
+            <p class="card-text text-muted">
+              Thanh bên này hiển thị ở góc bên phải trên màn hình Desktop ($\ge
+              992\text{px}$). Khi xem trên điện thoại, Sidebar sẽ tự động chuyển
+              xuống bên dưới phần Nội Dung Chính.
+            </p>
+          </div>
+
+          <div class="card p-4 shadow-sm border-0 bg-white">
+            <h3 class="h5 card-title fw-bold border-bottom pb-2 mb-3">
+              Liên Kết Nhanh
+            </h3>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2">
+                <a href="#" class="text-decoration-none text-primary"
+                  >▸ Hướng dẫn Bootstrap 5</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-decoration-none text-primary"
+                  >▸ Cách dùng Responsive Grid</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-primary"
+                  >▸ Tài liệu tham khảo UI/UX</a
+                >
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto border-top">
+      <div class="container">
+        <p class="mb-0">&copy; 2026 MyWebsite. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
