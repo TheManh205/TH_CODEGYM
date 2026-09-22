@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Đăng Ký Tài Khoản</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body
+    class="bg-light min-vh-100 d-flex flex-column justify-content-center py-4 py-md-5"
+  >
+    <main class="container my-auto">
+      <div
+        class="row justify-content-center align-items-center g-0 bg-white rounded-4 shadow-lg overflow-hidden"
+      >
+        <!-- Cột trái: Bootstrap Carousel quảng bá lợi ích dịch vụ (Hiển thị trên Desktop / Tablet) -->
+        <div class="col-12 col-lg-6 d-none d-lg-block bg-dark">
+          <div
+            id="serviceCarousel"
+            class="carousel slide carousel-fade"
+            data-bs-ride="carousel"
+          >
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#serviceCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#serviceCarousel"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#serviceCarousel"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+
+            <!-- Carousel Items -->
+            <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <div class="carousel-item active" data-bs-interval="4000">
+                <img
+                  src="https://picsum.photos/800/1000?technology"
+                  class="d-block w-100 opacity-75"
+                  alt="Công nghệ hiện đại"
+                  style="object-fit: cover; height: 620px"
+                />
+                <div
+                  class="carousel-caption d-block bg-dark bg-opacity-75 rounded-3 p-4 mb-4"
+                >
+                  <i class="fas fa-rocket fa-2x text-primary mb-2"></i>
+                  <h4 class="fw-bold">Hiệu Suất Vượt Trội</h4>
+                  <p class="small mb-0">
+                    Trải nghiệm hệ thống quản lý hiện đại với tốc độ xử lý nhanh
+                    chóng và tối ưu nhất.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="carousel-item" data-bs-interval="4000">
+                <img
+                  src="https://picsum.photos/800/1000?security"
+                  class="d-block w-100 opacity-75"
+                  alt="Bảo mật an toàn"
+                  style="object-fit: cover; height: 620px"
+                />
+                <div
+                  class="carousel-caption d-block bg-dark bg-opacity-75 rounded-3 p-4 mb-4"
+                >
+                  <i class="fas fa-shield-halved fa-2x text-success mb-2"></i>
+                  <h4 class="fw-bold">Bảo Mật Tuyệt Đối</h4>
+                  <p class="small mb-0">
+                    Dữ liệu cá nhân của bạn luôn được mã hóa chuẩn quốc tế và
+                    bảo vệ an toàn 24/7.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="carousel-item" data-bs-interval="4000">
+                <img
+                  src="https://picsum.photos/800/1000?team"
+                  class="d-block w-100 opacity-75"
+                  alt="Hỗ trợ 24/7"
+                  style="object-fit: cover; height: 620px"
+                />
+                <div
+                  class="carousel-caption d-block bg-dark bg-opacity-75 rounded-3 p-4 mb-4"
+                >
+                  <i class="fas fa-headset fa-2x text-warning mb-2"></i>
+                  <h4 class="fw-bold">Hỗ Trợ Chuyên Nghiệp</h4>
+                  <p class="small mb-0">
+                    Đội ngũ chuyên gia tận tâm luôn sẵn sàng tư vấn và giải đáp
+                    thắc mắc của bạn.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#serviceCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#serviceCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cột phải: Form Đăng Ký Tài Khoản -->
+        <div class="col-12 col-lg-6 p-4 p-sm-5">
+          <div class="text-center text-lg-start mb-4">
+            <h2 class="fw-bold text-primary mb-2">Tạo Tài Khoản Mới</h2>
+            <p class="text-muted">
+              Đăng ký ngay để bắt đầu trải nghiệm đầy đủ các tính năng.
+            </p>
+          </div>
+
+          <!-- Form Đăng Ký -->
+          <form>
+            <!-- Họ và tên -->
+            <div class="mb-3">
+              <label for="fullName" class="form-label fw-medium"
+                >Họ và tên <span class="text-danger">*</span></label
+              >
+              <div class="input-group">
+                <span class="input-group-text bg-light text-muted"
+                  ><i class="fas fa-user"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullName"
+                  placeholder="Nhập họ và tên đầy đủ"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="emailInput" class="form-label fw-medium"
+                >Địa chỉ Email <span class="text-danger">*</span></label
+              >
+              <div class="input-group">
+                <span class="input-group-text bg-light text-muted"
+                  ><i class="fas fa-envelope"></i
+                ></span>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailInput"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Mật khẩu -->
+            <div class="mb-3">
+              <label for="passwordInput" class="form-label fw-medium"
+                >Mật khẩu <span class="text-danger">*</span></label
+              >
+              <div class="input-group">
+                <span class="input-group-text bg-light text-muted"
+                  ><i class="fas fa-lock"></i
+                ></span>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="passwordInput"
+                  placeholder="Tối thiểu 8 ký tự"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Xác nhận mật khẩu -->
+            <div class="mb-3">
+              <label for="confirmPasswordInput" class="form-label fw-medium"
+                >Xác nhận mật khẩu <span class="text-danger">*</span></label
+              >
+              <div class="input-group">
+                <span class="input-group-text bg-light text-muted"
+                  ><i class="fas fa-shield-check"></i
+                ></span>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="confirmPasswordInput"
+                  placeholder="Nhập lại mật khẩu"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Điều khoản dịch vụ -->
+            <div class="mb-4 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="termsCheck"
+                required
+              />
+              <label class="form-check-label text-muted small" for="termsCheck">
+                Tôi đồng ý với
+                <a
+                  href="#"
+                  class="text-primary text-decoration-none fw-semibold"
+                  >Điều khoản dịch vụ</a
+                >
+                &
+                <a
+                  href="#"
+                  class="text-primary text-decoration-none fw-semibold"
+                  >Chính sách bảo mật</a
+                >.
+              </label>
+            </div>
+
+            <!-- Nút Submit -->
+            <div class="d-grid mb-3">
+              <button
+                type="submit"
+                class="btn btn-primary btn-lg fw-bold shadow-sm"
+              >
+                <i class="fas fa-user-plus me-2"></i>Đăng Ký Tài Khoản
+              </button>
+            </div>
+
+            <!-- Điều hướng đăng nhập -->
+            <p class="text-center text-muted small mb-0">
+              Đã có tài khoản?
+              <a href="#" class="text-primary fw-bold text-decoration-none"
+                >Đăng nhập ngay</a
+              >
+            </p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-muted small mt-4">
+      &copy; 2026 CodeGym Registration Page. All rights reserved.
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
