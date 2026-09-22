@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bố Cục 3 Cột bằng Bootstrap Grid và Flexbox</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-body-tertiary">
+    <!-- Header đơn giản -->
+    <header class="bg-dark text-white text-center py-4 mb-4 shadow-sm">
+      <div class="container">
+        <h1 class="h3 fw-bold mb-0">
+          <i class="fas fa-th-large me-2"></i>Thực Hành Bootstrap Grid & Flexbox
+        </h1>
+      </div>
+    </header>
+
+    <!-- Bước 2: Áp dụng Margin & Padding để điều chỉnh khoảng cách -->
+    <section class="container my-5 py-3 bg-white rounded shadow-sm">
+      <h3 class="text-center fw-bold text-primary mb-2">
+        Khoảng cách được điều chỉnh bằng Margin & Padding
+      </h3>
+      <p class="text-center text-muted mb-0">
+        Sử dụng các class utility
+        <code class="bg-light px-2 py-1 rounded">my-5</code> và
+        <code class="bg-light px-2 py-1 rounded">py-3</code> của Bootstrap để
+        tạo spacing linh hoạt cho Section.
+      </p>
+    </section>
+
+    <!-- Bước 1: Cấu trúc Grid với 3 cột kết hợp Flexbox -->
+    <section class="container my-4">
+      <div class="row g-3">
+        <!-- Cột 1 -->
+        <div class="col-12 col-md-4">
+          <div
+            class="d-flex justify-content-center align-items-center bg-light p-4 rounded shadow-sm border min-vh-25"
+            style="min-height: 180px"
+          >
+            <div class="text-center">
+              <i class="fas fa-cube fs-2 text-primary mb-2"></i>
+              <h5 class="fw-bold mb-1">Phần 1</h5>
+              <p class="text-muted small mb-0">Căn giữa bằng Flexbox</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột 2 -->
+        <div class="col-12 col-md-4">
+          <div
+            class="d-flex justify-content-center align-items-center bg-secondary p-4 text-white rounded shadow-sm border min-vh-25"
+            style="min-height: 180px"
+          >
+            <div class="text-center">
+              <i class="fas fa-layer-group fs-2 text-warning mb-2"></i>
+              <h5 class="fw-bold mb-1">Phần 2</h5>
+              <p class="text-white-50 small mb-0">Nổi bật với nền tối</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột 3 -->
+        <div class="col-12 col-md-4">
+          <div
+            class="d-flex justify-content-center align-items-center bg-light p-4 rounded shadow-sm border min-vh-25"
+            style="min-height: 180px"
+          >
+            <div class="text-center">
+              <i class="fas fa-shapes fs-2 text-primary mb-2"></i>
+              <h5 class="fw-bold mb-1">Phần 3</h5>
+              <p class="text-muted small mb-0">
+                Tự động điều chỉnh trên Mobile
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bước 3: Sử dụng Display Property để hiển thị ẩn hiện nội dung -->
+    <section class="container my-5">
+      <!-- Thông báo này chỉ hiển thị trên màn hình Desktop / Tablet (>= 768px) -->
+      <div
+        class="d-none d-md-block bg-warning text-dark text-center p-3 rounded shadow-sm border border-warning fw-semibold"
+      >
+        <i class="fas fa-desktop me-2"></i>Nội dung này chỉ hiển thị trên màn
+        hình lớn hơn 768px (Desktop / Tablet)
+      </div>
+
+      <!-- Thông báo thay thế hiển thị trên màn hình nhỏ (< 768px) -->
+      <div
+        class="d-block d-md-none bg-info text-dark text-center p-3 rounded shadow-sm border border-info fw-semibold"
+      >
+        <i class="fas fa-mobile-alt me-2"></i>Bạn đang xem giao diện này trên
+        màn hình Mobile (< 768px)
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+      <div class="container">
+        <p class="mb-0 small">
+          &copy; 2026 CodeGym Practice. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
