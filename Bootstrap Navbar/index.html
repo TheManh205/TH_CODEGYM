@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập CSS Flexbox Responsive</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="layout-wrapper">
+      <header class="header">
+        <h1>Trang Web Responsive Flexbox</h1>
+      </header>
+
+      <nav class="nav">
+        <a href="#">Trang chủ</a>
+        <a href="#">Bài viết</a>
+        <a href="#">Sản phẩm</a>
+        <a href="#">Liên hệ</a>
+      </nav>
+
+      <div class="body-container">
+        <main class="content">
+          <h2>Nội dung chính</h2>
+          <p>
+            Khu vực này sử dụng CSS Flexbox với thuộc tính
+            <code>flex: 3</code> để tự động chiếm phần lớn chiều rộng giao diện
+            trên Desktop. Khi thu nhỏ màn hình xuống Mobile, layout sẽ tự động
+            chuyển sang chiều dọc nhờ <code>flex-direction: column</code>.
+          </p>
+        </main>
+
+        <aside class="sidebar">
+          <h3>Sidebar</h3>
+          <p>Khu vực thông tin phụ, tin tức liên quan hoặc banner quảng cáo.</p>
+        </aside>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2026 Lương Thế Mạnh - All Rights Reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
