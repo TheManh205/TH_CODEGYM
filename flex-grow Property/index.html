@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành CSS flex-grow Property</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Thực hành Thuộc tính flex-grow</h1>
+
+    <!-- Ví dụ theo yêu cầu: 5 div, div thứ 2 tăng kích thước so với 4 div còn lại -->
+    <section class="demo-card">
+      <h2>1. Ví dụ số theo yêu cầu bài học (flex-grow: 3 trên Div thứ 2)</h2>
+      <p>
+        Container có 5 div. Div thứ 2 áp dụng flex-grow: 3 nên sẽ chiếm phần lớn
+        khoảng trống còn dư.
+      </p>
+      <div class="flex-container">
+        <div class="item">Div 1</div>
+        <div class="item grow-special">Div 2 (flex-grow: 3)</div>
+        <div class="item">Div 3</div>
+        <div class="item">Div 4</div>
+        <div class="item">Div 5</div>
+      </div>
+    </section>
+
+    <!-- Ví dụ 2: So sánh giữa các giá trị flex-grow khác nhau -->
+    <section class="demo-card">
+      <h2>2. Tỷ lệ phát triển (flex-grow: 1 vs flex-grow: 2)</h2>
+      <p>Item 2 chiếm gấp đôi khoảng trống thừa so với Item 1 và Item 3.</p>
+      <div class="flex-container">
+        <div class="item grow-1">Item 1 (grow: 1)</div>
+        <div class="item grow-2">Item 2 (grow: 2)</div>
+        <div class="item grow-1">Item 3 (grow: 1)</div>
+      </div>
+    </section>
+
+    <!-- Ví dụ 3: Thuộc tính initial và inherit -->
+    <section class="demo-card parent-wrapper">
+      <h2>3. Giá trị initial và inherit</h2>
+      <div class="flex-container">
+        <div class="item grow-initial">Item 1 (initial = 0)</div>
+        <div class="item grow-inherit">Item 2 (inherit từ parent = 1)</div>
+      </div>
+    </section>
+  </body>
+</html>

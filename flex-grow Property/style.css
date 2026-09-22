@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f8fafc;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.demo-card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.demo-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: #334155;
+}
+
+.demo-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+/* Cấu hình Flex Container */
+.flex-container {
+  display: flex;
+  background-color: #cbd5e1;
+  padding: 10px;
+  border-radius: 6px;
+  gap: 10px;
+  width: 100%;
+}
+
+.item {
+  background-color: #2563eb;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  flex-grow: 0; /* Giá trị mặc định: không tự phình to */
+}
+
+/* 1. Div thứ 2 phát triển mạnh hơn các div khác */
+.grow-special {
+  background-color: #16a34a;
+  flex-grow: 3;
+}
+
+/* 2. So sánh tỷ lệ flex-grow */
+.grow-1 {
+  background-color: #0284c7;
+  flex-grow: 1;
+}
+
+.grow-2 {
+  background-color: #ea580c;
+  flex-grow: 2;
+}
+
+/* 3. Global values: initial & inherit */
+.parent-wrapper {
+  flex-grow: 1; /* Định nghĩa ở phần tử cha */
+}
+
+.grow-initial {
+  background-color: #6b21a8;
+  flex-grow: initial; /* Khôi phục về mặc định (0) */
+}
+
+.grow-inherit {
+  background-color: #db2777;
+  flex-grow: inherit; /* Kế thừa giá trị 1 từ parent */
+}
