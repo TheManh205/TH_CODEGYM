@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Landing Page với Hình Ảnh</title>
+    <!-- Bootstrap CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <!-- Bootstrap Icons CDN (Dùng cho phần tính năng) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+    <style>
+      /* CSS tùy chỉnh cho Hero Banner với nền hình ảnh */
+      .hero-banner {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+          url("https://picsum.photos/1920/1080?technology") no-repeat center
+            center/cover;
+        padding: 100px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. Header / Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#"
+          ><i class="bi bi-rocket-takeoff-fill text-primary me-2"></i
+          >TechBrand</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#landingNav"
+          aria-controls="landingNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="landingNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Trang Chủ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Giới Thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Tính Năng</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cta">Đăng Ký</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 2. Banner / Hero Section (Ảnh nền lớn + Tiêu đề + Nút) -->
+    <header class="hero-banner text-white text-center">
+      <div class="container py-5">
+        <h1 class="display-3 fw-bold mb-3">Giải Pháp Công Nghệ Đột Phá</h1>
+        <p class="lead mb-4 col-lg-8 mx-auto">
+          Xây dựng ứng dụng hiện đại, tối ưu hiệu suất và nâng tầm trải nghiệm
+          số cho doanh nghiệp của bạn.
+        </p>
+        <a href="#cta" class="btn btn-primary btn-lg px-4 py-2 me-2 fw-semibold"
+          >Khám Phá Ngay</a
+        >
+        <a
+          href="#about"
+          class="btn btn-outline-light btn-lg px-4 py-2 fw-semibold"
+          >Tìm Hiểu Thêm</a
+        >
+      </div>
+    </header>
+
+    <!-- 3. Section Giới thiệu sản phẩm (1 row: Hình ảnh img-fluid + Mô tả) -->
+    <section id="about" class="py-5 bg-light">
+      <div class="container my-4">
+        <div class="row align-items-center g-5">
+          <div class="col-12 col-md-6">
+            <img
+              src="https://picsum.photos/600/400?code"
+              alt="Giới thiệu ứng dụng"
+              class="img-fluid rounded-3 shadow"
+            />
+          </div>
+          <div class="col-12 col-md-6">
+            <h2 class="fw-bold mb-3">Nền Tảng Tối Ưu Cho Phát Triển Web</h2>
+            <p class="text-muted">
+              Chúng tôi cung cấp bộ công cụ toàn diện giúp doanh nghiệp tự động
+              hóa quy trình, tăng cường bảo mật và tối ưu hóa tốc độ tải trang.
+            </p>
+            <p class="text-muted">
+              Giao diện responsive tương thích hoàn hảo trên mọi kích thước màn
+              hình từ điện thoại di động, máy tính bảng đến máy tính để bàn.
+            </p>
+            <a href="#cta" class="btn btn-outline-primary fw-semibold mt-2"
+              >Xem Bản Demo</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Section Danh sách tính năng (1 row gồm 3 cột: Icon + Tiêu đề + Mô tả) -->
+    <section id="features" class="py-5">
+      <div class="container my-4">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Tính Năng Nổi Bật</h2>
+          <p class="text-muted">
+            Cung cấp giải pháp đáp ứng mọi tiêu chuẩn chất lượng
+          </p>
+        </div>
+        <div class="row g-4">
+          <!-- Cột 1 -->
+          <div class="col-12 col-md-4 text-center">
+            <div class="card p-4 h-100 border-0 shadow-sm">
+              <div class="fs-1 text-primary mb-3">
+                <i class="bi bi-speedometer2"></i>
+              </div>
+              <h3 class="h4 card-title fw-bold">Tốc Độ Vượt Trội</h3>
+              <p class="card-text text-muted">
+                Tối ưu mã nguồn giúp trang web vận hành mượt mà và tải trang
+                nhanh chóng.
+              </p>
+            </div>
+          </div>
+          <!-- Cột 2 -->
+          <div class="col-12 col-md-4 text-center">
+            <div class="card p-4 h-100 border-0 shadow-sm">
+              <div class="fs-1 text-primary mb-3">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h3 class="h4 card-title fw-bold">Bảo Mật An Toàn</h3>
+              <p class="card-text text-muted">
+                Mã hóa dữ liệu chuẩn quốc tế bảo vệ an toàn thông tin khách
+                hàng.
+              </p>
+            </div>
+          </div>
+          <!-- Cột 3 -->
+          <div class="col-12 col-md-4 text-center">
+            <div class="card p-4 h-100 border-0 shadow-sm">
+              <div class="fs-1 text-primary mb-3">
+                <i class="bi bi-phone"></i>
+              </div>
+              <h3 class="h4 card-title fw-bold">Chuẩn Responsive</h3>
+              <p class="card-text text-muted">
+                Tự động tương thích hoàn hảo trên mọi thiết bị di động và máy
+                tính.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Nút Kêu Gọi Hành Động (CTA Section) -->
+    <section id="cta" class="bg-primary text-white text-center py-5">
+      <div class="container py-3">
+        <h2 class="fw-bold mb-3">Sẵn Sàng Trải Nghiệm Dịch Vụ?</h2>
+        <p class="lead mb-4 col-lg-8 mx-auto">
+          Đăng ký ngay hôm nay để nhận 14 ngày dùng thử miễn phí đầy đủ tính
+          năng.
+        </p>
+        <button
+          class="btn btn-light btn-lg px-5 py-3 fw-bold text-primary shadow"
+        >
+          Đăng Ký Ngay
+        </button>
+      </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+      <div class="container">
+        <p class="mb-0">&copy; 2026 TechBrand. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
