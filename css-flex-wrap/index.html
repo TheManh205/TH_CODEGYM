@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành CSS flex-wrap Property</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Thực hành Thuộc tính flex-wrap</h1>
+
+    <!-- 1. Giá trị nowrap (Mặc định) -->
+    <section class="demo-card">
+      <h2>1. flex-wrap: nowrap (Mặc định)</h2>
+      <p>
+        Các item ép nằm trên 1 dòng duy nhất, tự co lại khi vượt quá chiều rộng
+        container.
+      </p>
+      <div class="flex-container wrap-nowrap">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+      </div>
+    </section>
+
+    <!-- 2. Giá trị wrap -->
+    <section class="demo-card">
+      <h2>2. flex-wrap: wrap</h2>
+      <p>Các item sẽ tự động xuống dòng mới khi không đủ không gian chứa.</p>
+      <div class="flex-container wrap-wrap">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+      </div>
+    </section>
+
+    <!-- 3. Giá trị wrap-reverse -->
+    <section class="demo-card">
+      <h2>3. flex-wrap: wrap-reverse</h2>
+      <p>
+        Các item xuống dòng nhưng theo chiều đảo ngược (dòng mới nằm phía trên).
+      </p>
+      <div class="flex-container wrap-reverse">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+      </div>
+    </section>
+
+    <!-- 4. Giá trị initial -->
+    <section class="demo-card">
+      <h2>4. flex-wrap: initial</h2>
+      <p>
+        Khôi phục thuộc tính về giá trị mặc định của CSS (ngang với nowrap).
+      </p>
+      <div class="flex-container wrap-initial">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+      </div>
+    </section>
+  </body>
+</html>
