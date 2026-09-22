@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+/* Base Grid Layout cho Desktop */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "sidebar main"
+    "footer footer";
+  min-height: 100vh;
+}
+
+/* Định dạng các khu vực */
+.header {
+  grid-area: header;
+  background-color: #1e293b;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: #334155;
+  padding: 10px 20px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: #38bdf8;
+}
+
+.main {
+  grid-area: main;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #e2e8f0;
+  padding: 20px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #1e293b;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Yêu cầu Responsive trên Mobile (< 768px) */
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "sidebar"
+      "footer";
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
