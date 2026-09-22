@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #282a35;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #04aa6d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header {
+  background-color: #282a35;
+  color: white;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #282a35;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.home-hero {
+  padding: 40px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */
