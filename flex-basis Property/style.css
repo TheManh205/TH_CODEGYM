@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f8fafc;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.demo-card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.demo-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: #334155;
+}
+
+.demo-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+/* Cấu hình chung cho Flex Container */
+.flex-container {
+  display: flex;
+  background-color: #cbd5e1;
+  padding: 10px;
+  border-radius: 6px;
+  gap: 10px;
+}
+
+.item {
+  background-color: #0284c7;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* Ví dụ 1: Chiều rộng ban đầu ấn định bằng đơn vị px */
+.basis-number {
+  background-color: #16a34a;
+  flex-basis: 200px;
+}
+
+/* Ví dụ 2: Tự động tính kích thước theo nội dung */
+.basis-auto {
+  background-color: #ea580c;
+  flex-basis: auto;
+}
+
+/* Ví dụ 3: Thuộc tính initial & inherit */
+.parent-box {
+  flex-basis: 180px; /* Thuộc tính mẫu ở phần tử cha */
+}
+
+.basis-initial {
+  background-color: #6b21a8;
+  flex-basis: initial; /* Khôi phục về mặc định (auto) */
+}
+
+.basis-inherit {
+  background-color: #db2777;
+  flex-basis: inherit; /* Kế thừa kích thước 180px từ cha */
+}

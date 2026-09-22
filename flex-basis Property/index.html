@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành CSS flex-basis Property</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Thực hành Thuộc tính flex-basis</h1>
+
+    <!-- Ví dụ 1: Đặt kích thước ban đầu bằng con số cụ thể (px / %) -->
+    <section class="demo-card">
+      <h2>Ví dụ 1: flex-basis dạng number/length (200px)</h2>
+      <p>Item 2 được thiết lập kích thước ban đầu là 200px.</p>
+      <div class="flex-container">
+        <div class="item">Item 1</div>
+        <div class="item basis-number">Item 2 (flex-basis: 200px)</div>
+        <div class="item">Item 3</div>
+      </div>
+    </section>
+
+    <!-- Ví dụ 2: Đặt giá trị auto (Kích thước theo nội dung) -->
+    <section class="demo-card">
+      <h2>Ví dụ 2: flex-basis: auto (Mặc định)</h2>
+      <p>Kích thước ban đầu tự động phụ thuộc vào nội dung bên trong item.</p>
+      <div class="flex-container">
+        <div class="item">Item 1</div>
+        <div class="item basis-auto">Item 2 ngắn</div>
+        <div class="item basis-auto">Item 3 có nội dung dài hơn nhiều</div>
+      </div>
+    </section>
+
+    <!-- Ví dụ 3: Giá trị initial và inherit -->
+    <section class="demo-card">
+      <h2>Ví dụ 3: flex-basis: initial và inherit</h2>
+      <div class="parent-box">
+        <div class="flex-container">
+          <div class="item basis-initial">Item 1 (initial)</div>
+          <div class="item basis-inherit">
+            Item 2 (inherit từ parent = 180px)
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
