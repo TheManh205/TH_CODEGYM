@@ -1,25 +1,125 @@
-h1 {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333333;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #666666;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 0;
+}
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav__logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333333;
+}
+.header .nav__menu {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+.header .nav__menu a {
+  text-decoration: none;
+  color: #333333;
+}
+.header .nav__menu a:hover {
+  color: #333333;
+}
+
+.products {
+  padding: 40px 0;
+}
+.products__grid {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  .products__grid {
+    flex-direction: column;
+  }
+}
+.products__card {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.stats {
+  background-color: #f4f4f4;
+  padding: 40px 0;
+  text-align: center;
+}
+.stats__grid {
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 600px) {
+  .stats__grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.stats__number {
   font-size: 32px;
-  color: #222;
+  font-weight: bold;
+  color: #333333;
 }
 
-h2 {
-  font-size: 28px;
-  color: #222;
+.stats {
+  background-color: #f4f4f4;
+  padding: 40px 0;
+  text-align: center;
 }
-
-.button {
-  background: red;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+.stats__grid {
+  display: flex;
+  justify-content: space-around;
 }
-
-.card {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+@media (max-width: 600px) {
+  .stats__grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.stats__number {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333333;
 }
 
 /*# sourceMappingURL=style.css.map */

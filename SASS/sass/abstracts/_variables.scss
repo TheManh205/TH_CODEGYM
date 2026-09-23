@@ -1,6 +1,12 @@
-$primary-color: red;
-$text-color: #222;
-$font-large: 32px;
-$font-medium: 28px;
-$padding-standard: 10px 20px;
-$box-shadow-default: 2px 2px 10px rgba(0, 0, 0, 0.1);
+// Color Variables
+$primary-color: #333333;
+$background-color: #f4f4f4;
+$card-bg: #ffffff;
+$border-color: #e0e0e0;
+$text-color: #333333;
+$text-muted: #666666;
+$white: #ffffff;
+
+// Responsive Breakpoints
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 900px;

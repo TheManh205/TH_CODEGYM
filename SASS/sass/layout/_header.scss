@@ -1,7 +1,34 @@
 @use "../abstracts" as *;
 
 .header {
-  background-color: $dark-color;
-  color: white;
-  padding: 20px;
+  background-color: $card-bg;
+  border-bottom: 1px solid $border-color;
+  padding: 15px 0;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: $primary-color;
+    }
+
+    &__menu {
+      display: flex;
+      list-style: none;
+      gap: 15px;
+
+      a {
+        text-decoration: none;
+        color: $text-color;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
 }
