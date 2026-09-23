@@ -5,9 +5,16 @@
 @use "base/reset";
 @use "base/typography";
 
-// 3. Layout
+// 3. Components
+@use "components/buttons";
+@use "components/cards";
+
+// 4. Layout
 @use "layout/container";
 @use "layout/header";
 @use "layout/products";
 @use "layout/stats";
 @use "layout/footer";
+
+// 5. Pages
+@use "pages/home";

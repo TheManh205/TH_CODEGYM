@@ -1,23 +1,12 @@
 @use "../abstracts" as *;
 
-.stats {
-  background-color: $background-color;
-  padding: 40px 0;
-  text-align: center;
+.site-footer {
+  background-color: darken(#212529, 5%);
+  color: $white;
+  padding: 30px 0;
 
-  &__grid {
-    display: flex;
-    justify-content: space-around;
-
-    @include mobile {
-      flex-direction: column;
-      gap: 20px;
-    }
-  }
-
-  &__number {
-    font-size: 32px;
-    font-weight: bold;
-    color: $primary-color;
+  p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
   }
 }

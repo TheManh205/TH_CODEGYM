@@ -1,22 +1,6 @@
 @use "../abstracts" as *;
 
-.products {
-  padding: 40px 0;
-
-  &__grid {
-    display: flex;
-    gap: 20px;
-
-    @include mobile {
-      flex-direction: column;
-    }
-  }
-
-  &__card {
-    background-color: $card-bg;
-    padding: 20px;
-    border: 1px solid $border-color;
-    border-radius: 4px;
-    flex: 1;
-  }
+.products-section {
+  padding: 60px 0;
+  background-color: $background-color;
 }

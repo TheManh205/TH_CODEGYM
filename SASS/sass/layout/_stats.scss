@@ -1,23 +1,8 @@
 @use "../abstracts" as *;
 
-.stats {
-  background-color: $background-color;
+.stats-section {
   padding: 40px 0;
-  text-align: center;
-
-  &__grid {
-    display: flex;
-    justify-content: space-around;
-
-    @include mobile {
-      flex-direction: column;
-      gap: 20px;
-    }
-  }
-
-  &__number {
-    font-size: 32px;
-    font-weight: bold;
-    color: $primary-color;
-  }
+  background-color: $card-bg;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
 }

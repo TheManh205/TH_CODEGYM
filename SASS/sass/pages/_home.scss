@@ -1,4 +1,8 @@
-.home-hero {
-  padding: 40px;
-  text-align: center;
+@use "../abstracts" as *;
+
+.home-page {
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
 }
